@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="metoonavbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".toggle").on("click", function () {
+
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+    </script>
+
+    <title>Metoo Navbar</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="navmenu">
+            <li class="logo"><a href="#">Metoo</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Find Bookpods</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item button"><a href="#">Log In</a></li>
+            <li class="item button signup"><a href="#">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    </main>
+
+</body>
+
+</html>
