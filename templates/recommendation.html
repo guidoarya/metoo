@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <title>Recomendation</title>
+</head>
+
+<body>
+  <div class="container mt-5 mb-5 sec-rec">
+    <form class="row g-3" action="{{url_for('recommend')}}" method="post">
+      <select class="form-select" aria-label="Default select example" name="genre">
+        <option selected>Genre</option>
+        <option value="Horror">Horror</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mistery">Mistery</option>
+        <option value="Romance">Romance</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Fanfiction">Fanfiction</option>
+        <option value="History">History</option>
+        <option value="Thriller">Thriller</option>
+        <option value="ClassicRomance">Classic Romance</option>
+      </select>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-dark mt-5" style="font-size:50px">Top 10 Recommend Books</h1>
+      </div>
+
+      {% if data %}
+
+      {% for i in data %}
+      <div class="col-md-2" style="margin-top:50px">
+        <div class="card">
+          <div class="card-body">
+            <img class="card-img-top" src="{{i[2]}}">
+            <p class="text-dark">{{i[0]}}</p>
+            <h4 class="text-dark">{{i[1]}}</h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

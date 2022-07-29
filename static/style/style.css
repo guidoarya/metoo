@@ -1,0 +1,23 @@
+.jumbo {
+  width: 70%;
+  height: 250px;
+  background-color: #1AB3CF;
+  border-radius: 50px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.btn-orange {
+  background-color: #F66B0E;
+  color: white;
+}
+
+.sec-rec {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 120px;
+  width: 30%;
+  margin: -50px auto;
+  padding-top: 12px;
+}
